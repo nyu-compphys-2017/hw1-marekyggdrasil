@@ -48,4 +48,8 @@ if args.load is not None :
     (rx, ry) = pickle.load(open(args.load[0], 'rb'))
 
 if args.plot is not None :
+    if len(rx) != len(ry) :
+        raise ValueError('Mandelbrot dataset is corrupted, generate a new dataset')
+    if len(rx) == 0 :
+        raise ValueError('No Mandelbrot dataset, use --generate or --load options before plotting')
     actionPlot(args.plot[0], rx, ry)
