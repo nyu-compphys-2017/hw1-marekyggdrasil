@@ -45,11 +45,14 @@ def actionGenerate(N, maxiter, chunks) :
             ry += rry
     return rx, ry
 
-def actionPlot(b, rx, ry) :
+def actionPlot(b, c, rx, ry) :
+    cmap = None
+    if c is not None :
+        cmap = c[0]
     heatmap, xedges, yedges = np.histogram2d(rx, ry, bins=b)
     extent = [xedges[0], xedges[-1], yedges[0], yedges[-1]]
     plt.clf()
-    plt.imshow(heatmap.T, extent=extent, origin='lower')
+    plt.imshow(heatmap.T, extent=extent, origin='lower', cmap=cmap)
     plt.show()
 
 parser = argparse.ArgumentParser(description='Mandelbrot set generator and plotter.')
@@ -57,7 +60,8 @@ parser.add_argument('--generate', nargs=2, metavar=('N', 'maxiter'), type=int, h
 parser.add_argument('--threads', nargs=1, metavar=('n'), type=int, default=[1], help='number of threads to be use during dataset generation')
 parser.add_argument('--save', nargs=1, metavar=('filename'), help='save generated set to a file')
 parser.add_argument('--load', nargs=1, metavar=('filename'), help='load generated set from a file')
-parser.add_argument('--plot', nargs=1, metavar=('b'), type=int, help='generate plot of Mandelbrot set with b bins')
+parser.add_argument('--plot', nargs=1, metavar=('b'), type=int, help='generate plot of Mandelbrot set as 2D histogram with b bins')
+parser.add_argument('--colormap', nargs=1, metavar=('c'), help='colormap of the plot (ex. gray, jet, plasma, inferno, viridis, magma)')
 args = parser.parse_args()
 
 rx = []
@@ -76,4 +80,4 @@ if args.plot is not None :
         raise ValueError('Mandelbrot dataset is corrupted, generate a new dataset')
     if len(rx) == 0 :
         raise ValueError('No Mandelbrot dataset, use --generate or --load options before plotting')
-    actionPlot(args.plot[0], rx, ry)
+    actionPlot(args.plot[0], args.colormap, rx, ry)
