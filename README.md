@@ -45,7 +45,12 @@ python mandelbrot.py --generate 30 100 --threads 2 --save dataset.p
 
 # Least-Squares
 
+Millikan dataset demonstrating photoelectric effect with line fitted to is using `leastsquares.py`.
+
 ![Figure displaying Least-Squares fit to Millikan dataset](https://github.com/nyu-compphys-2017/hw1-marekyggdrasil/blob/master/figure_leastsquares_fit.png?raw=true "Millikan Dataset")
+
+Zoom in for to show more clearly that fitted line does not overlap all the points.
+
 ![Figure displaying Least-Squares fit to Millikan dataset zoomed in](https://github.com/nyu-compphys-2017/hw1-marekyggdrasil/blob/master/figure_leastsquares_zoom.png?raw=true "Millikan Dataset (zoom)")
 
 ## example commands
