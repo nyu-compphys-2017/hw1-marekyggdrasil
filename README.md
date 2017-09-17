@@ -1,12 +1,12 @@
-## Introduction
+# Introduction
 
-# Requirements
+## Requirements
 
 Mandelbrot requires `argparse`, `numpy`, `sysconfig`, `sys`, `matplotlib`, `pickle` and `multiprocessing`. To run Least-Squares method you need only `argparse`, `numpy`, and `matplotlib`
 
-## Mandelbrot
+# Mandelbrot
 
-# example commands
+## example commands
 
 Getting some help.
 
@@ -38,9 +38,9 @@ Generating Mandelbrot dataset in multiprocessing mode with two threads.
 python mandelbrot.py --generate 30 100 --threads 2 --save dataset.p
 ```
 
-## Least-Squares
+# Least-Squares
 
-# example commands
+## example commands
 
 Run Least-Squares fitting with file `millikan.txt`. Filename argument is required.
 
@@ -48,8 +48,8 @@ Run Least-Squares fitting with file `millikan.txt`. Filename argument is require
 python leastsquares.py millikan.txt
 ```
 
-## Report
+# Report
 
-## Homework 1 statement
+# Homework 1 statement
 
 Problem statement in [HW1-Problems.md](./HW1-Problems.md)
