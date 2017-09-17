@@ -63,6 +63,8 @@ python leastsquares.py millikan.txt
 
 # Report
 
+Please consult the file [report.pdf](./report.pdf)
+
 # Homework 1 statement
 
 Problem statement in [HW1-Problems.md](./HW1-Problems.md)
