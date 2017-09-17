@@ -40,6 +40,9 @@ python mandelbrot.py --generate 30 100 --threads 2 --save dataset.p
 
 # Least-Squares
 
+![Figure displaying Least-Squares fit to Millikan dataset](https://github.com/nyu-compphys-2017/hw1-marekyggdrasil/blob/master/figure_leastsquares_fit.png?raw=true "Millikan Dataset")
+![Figure displaying Least-Squares fit to Millikan dataset zoomed in](https://github.com/nyu-compphys-2017/hw1-marekyggdrasil/blob/master/figure_leastsquares_zoom.png?raw=true "Millikan Dataset (zoom)")
+
 ## example commands
 
 Run Least-Squares fitting with file `millikan.txt`. Filename argument is required.
