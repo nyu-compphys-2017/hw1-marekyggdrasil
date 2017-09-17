@@ -6,6 +6,11 @@ Mandelbrot requires `argparse`, `numpy`, `sysconfig`, `sys`, `matplotlib`, `pick
 
 # Mandelbrot
 
+Following figures were generated using `mandelbrot.py` program with grid size of `1000x1000` and maximum number of iterations with `1000`, then plotted as `200` bins histogram.
+
+![Figure displaying Mandelbrot set in grayscale](https://github.com/nyu-compphys-2017/hw1-marekyggdrasil/blob/master/figure_mandelbrot_gray.png?raw=true "Mandelbrot Grayscale")
+![Figure displaying Mandelbrot set in jet colormap](https://github.com/nyu-compphys-2017/hw1-marekyggdrasil/blob/master/figure_mandelbrot_jet.png?raw=true "Mandelbrot Jet")
+
 ## example commands
 
 Getting some help.
