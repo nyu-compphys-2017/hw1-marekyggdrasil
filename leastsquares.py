@@ -30,8 +30,15 @@ def actionPlot(x, y, fity) :
 
 parser = argparse.ArgumentParser(description='Least-Squares fitting.')
 parser.add_argument('filename', nargs=1, metavar=('filename'), help='load data from file, see millikan.txt as an example')
+parser.add_argument('--save', nargs=1, metavar=('filename'), help='save numerical results to a output file in same format as input file')
 args = parser.parse_args()
 
 x, y = actionReadData(args.filename[0])
 fity = actionLeastSquares(x, y)
 actionPlot(x, y, fity)
+
+if args.save is not None :
+    f = open(args.save[0], 'wb')
+    for cx, cy in zip(x, fity) :
+        f.write('%s %s\n' % (str(cx), str(cy)))
+    f.close()

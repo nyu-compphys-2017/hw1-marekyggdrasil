@@ -61,6 +61,12 @@ Run Least-Squares fitting with file `millikan.txt`. Filename argument is require
 python leastsquares.py millikan.txt
 ```
 
+Run same procedure as previous command and save results to `millikan_res.txt`
+
+```sh
+python leastsquares.py millikan.txt --save millikan_res.txt
+```
+
 # Report
 
 Please consult the file [report.pdf](./report.pdf)
